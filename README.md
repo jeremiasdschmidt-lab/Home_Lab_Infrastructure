@@ -16,3 +16,17 @@ This project showcases a fully functional corporate network environment simulate
 ### 🎓 Education
 * **Cybersecurity Student** - Universidad Nacional de Scalabrini Ortiz (UNSO).
 * **Server Administration Course** - UTN.
+
+## Proof of Work (Screenshots)
+
+### 1. Active Directory Audit
+Testing the PowerShell script to detect inactive users in the Windows Server 2022 domain.
+![AD Audit Test](Audit-ADUsers%20script.png)
+
+### 2. Linux Authentication Monitor
+Validating the Bash script in Rocky Linux by simulating failed login attempts via SSH.
+![Linux Monitor Test](monitor-auth-logs-script.png)
+
+### 3. Infrastructure Health Check
+Running the health check on critical services (DNS, ADWS, NTDS) and gateway connectivity.
+![Health Check Test](check-IT-Services%20script.png)
