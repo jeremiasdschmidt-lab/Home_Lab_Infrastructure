@@ -1,3 +1,9 @@
+# Command-Line argument for specifying Gateway
+param(
+	[Parameter(Mandatory=$true, HelpMessage="Please provide a valid Gateway IP address. Common ones ares: 192.168.1.1, 192.168.0.1, 10.0.0.1")]
+	[string]$Gateway
+)
+
 # Check Status of Critical IT Services
 $Services = @("DNS", "ADWS", "ntds") # DNS, AD Web Services, and Active Directory Domain Services
 
@@ -14,7 +20,6 @@ foreach ($Service in $Services) {
 }
 
 # Simple connectivity test to the Gateway
-$Gateway = "192.168.1.1" # Cambialo por la IP de tu Gateway si es otra
 if (Test-Connection -ComputerName $Gateway -Count 1 -Quiet) {
     Write-Host "[PASS] Network Gateway is reachable." -ForegroundColor Green
 } else {
